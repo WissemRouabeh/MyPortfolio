@@ -63,7 +63,7 @@ function Skills({ ineref, setToggle }) {
           </div>
           <div>
             <img src="./static/tensorflow.png" alt="" />
-            <span>Tensorflow</span>
+            <span>Tensorflows</span>
           </div>
           <div>
             <img src="./static/htmlcss.png" alt="" />
