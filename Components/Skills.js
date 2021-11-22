@@ -30,8 +30,8 @@ function Skills({ ineref, setToggle }) {
             <span>ReactJS</span>
           </div>
           <div>
-            <img src="./static/next.png" alt="" />
-            <span>nextjs</span>
+            <img src="./static/Next.png" alt="" />
+            <span>Next.js</span>
           </div>
           <div>
             <img src="./static/angular.png" alt="" />
@@ -39,7 +39,7 @@ function Skills({ ineref, setToggle }) {
           </div>
           <div>
             <img src="./static/nodejs.png" alt="" />
-            <span>NodeJS</span>
+            <span>Node.js</span>
           </div>
           <div>
             <img src="./static/spring.png" alt="" />
@@ -55,7 +55,7 @@ function Skills({ ineref, setToggle }) {
           </div>
           <div>
             <img src="./static/socket.png" alt="" />
-            <span>Socket</span>
+            <span>Socket.io</span>
           </div>
           <div>
             <img src="./static/webrtc.png" alt="" />

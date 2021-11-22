@@ -67,8 +67,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Intro to  android dev",
       description:
         "A show case reusable application, glass landing page with flat design pages, one page application with scroll to section commanded from the navbar, with a contact form",
-      img1: "./media/and/1.jpg",
-      img2: "./media/and/2.jpg",
+      img1: "./media/and/1.JPG",
+      img2: "./media/and/2.JPG",
       tag: ["HTML", "javascript", "CSS"],
     },
   ]);
