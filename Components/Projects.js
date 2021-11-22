@@ -10,8 +10,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "VideoConference platform",
       description:
         "A completed platform for video-conference based on rooms in wich users can do CRUD functions, webRTC and socket term for communicate on realTime, realTimes chatting ,video-audio call and screen sharing.",
-      img1: "./pprojects/webrtc/2c.jpg",
-      img2: "./pprojects/webrtc/1c.jpg",
+      img1: "./media/webrtc/2c.jpg",
+      img2: "./media/webrtc/1c.jpg",
       tag: [
         "React",
         "Node",
@@ -31,8 +31,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Wissem's Portfolio",
       description:
         "As a developper i need a Portfolio to introduce me, for that i built a responsive portfolio with a side fixed bar and a snap scrollable sections based in ux/ui practicis.",
-      img1: "./pprojects/Portfolio.jpg",
-      img2: "./pprojects/Portfolio.jpg",
+      img1: "./media/portfolio.jpg",
+      img2: "./media/portfolio.jpg",
       tag: ["Next.js", "React hooks", "Sass", "MaterialUI", "javascript"],
     },
     {
@@ -40,8 +40,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Landing with sign-up",
       description:
         "A reusable landing page with scroll to sign-up form build with formik and a smooth changable background color, a fixed navbar integrated with a dropdown sign-in form",
-      img1: "./pprojects/Reactscrollformik.jpg",
-      img2: "./pprojects/Reactscrollformik.jpg",
+      img1: "./media/Reactscrollformik.jpg",
+      img2: "./media/Reactscrollformik.jpg",
       tag: ["React", , "Redux", "Formik", "javascript", "CSS"],
     },
     {
@@ -49,8 +49,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "E-courses platform",
       description:
         "An e-commerce platform for courses, in wich you can find a bunch of IT courses, all CRUD functions integrated,",
-      img1: "./pprojects/ionic/1.jpg",
-      img2: "./pprojects/ionic/2.jpg",
+      img1: "./media/ionic/1.jpg",
+      img2: "./media/ionic/2.jpg",
       tag: ["Ionic", "Elasticsearch", "Typescript", "Bootstrap"],
     },
     {
@@ -58,8 +58,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Student Management",
       description:
         "An application for Student management, one type of user can do all CRUD functions on student layer",
-      img1: "./pprojects/mangstudent.jpg",
-      img2: "./pprojects/mangstudent.jpg",
+      img1: "./media/mangstudent.jpg",
+      img2: "./media/mangstudent.jpg",
       tag: ["Angular", "Typescript", "Bootstrap", "CSS", "Forms"],
     },
     {
@@ -67,8 +67,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Intro to  android dev",
       description:
         "A show case reusable application, glass landing page with flat design pages, one page application with scroll to section commanded from the navbar, with a contact form",
-      img1: "./pprojects/and/1.jpg",
-      img2: "./pprojects/and/2.jpg",
+      img1: "./media/and/1.jpg",
+      img2: "./media/and/2.jpg",
       tag: ["HTML", "javascript", "CSS"],
     },
   ]);
