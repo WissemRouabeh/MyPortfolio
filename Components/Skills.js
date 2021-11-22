@@ -27,7 +27,7 @@ function Skills({ ineref, setToggle }) {
         <div className={styles.cards}>
           <div>
             <img src="./static/react.png" alt="" />
-            <span>ReactJS</span>
+            <span>React.js</span>
           </div>
           <div>
             <img src="./static/Next.png" alt="" />
