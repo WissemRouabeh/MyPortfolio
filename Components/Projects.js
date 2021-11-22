@@ -40,8 +40,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "Landing with sign-up",
       description:
         "A reusable landing page with scroll to sign-up form build with formik and a smooth changable background color, a fixed navbar integrated with a dropdown sign-in form",
-      img1: "./media/Reactscrollformik.jpg",
-      img2: "./media/Reactscrollformik.jpg",
+      img1: "./media/reactscrollformik.jpg",
+      img2: "./media/reactscrollformik.jpg",
       tag: ["React", , "Redux", "Formik", "javascript", "CSS"],
     },
     {
