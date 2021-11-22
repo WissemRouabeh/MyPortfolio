@@ -49,8 +49,8 @@ function Projects({ ineref, setToggle, setNavigator }) {
       title: "E-courses platform",
       description:
         "An e-commerce platform for courses, in wich you can find a bunch of IT courses, all CRUD functions integrated,",
-      img1: "./media/ionic/1.jpg",
-      img2: "./media/ionic/2.jpg",
+      img1: "./media/ionic/1.JPG",
+      img2: "./media/ionic/2.JPG",
       tag: ["Ionic", "Elasticsearch", "Typescript", "Bootstrap"],
     },
     {
