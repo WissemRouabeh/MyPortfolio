@@ -74,7 +74,10 @@
         margin: 0.7%;
         width: 100%;
       }
-
+      input,
+      textarea {
+        padding-left: 3px;
+      }
       textarea {
         resize: none;
         resize: vertical;

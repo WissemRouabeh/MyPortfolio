@@ -5,12 +5,52 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import AppsIcon from "@mui/icons-material/Apps";
 import SendIcon from "@mui/icons-material/Send";
+import Snackbar from "@mui/material/Snackbar";
+
+import MuiAlert from "@mui/material/Alert";
 import { useState } from "react";
+
 function Contact({ ineref, setToggle }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [body, setBody] = useState("");
+  const [open, setOpen] = useState(false);
+  const [alert, setAlert] = useState({
+    type: "success",
+    message: "Email sent!",
+  });
+  const emailRegex = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
+  const handleClick = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+
+    setOpen(false);
+  };
+  const valid = () => {
+    if (email == "") {
+      setAlert({ type: "error", message: "Email required!" });
+      handleClick();
+      return false;
+    } else if (!emailRegex.test(String(email).toLowerCase())) {
+      setAlert({ type: "error", message: "Invalid email address!" });
+      handleClick();
+      return false;
+    } else if (name == "") {
+      setAlert({ type: "error", message: "Name required!" });
+      handleClick();
+      return false;
+    } else {
+      setAlert({ type: "success", message: "Email sent!" });
+      handleClick();
+      return true;
+    }
+  };
   const handle = (e) => {
     e.preventDefault();
     console.log("Sending");
@@ -37,9 +77,14 @@ function Contact({ ineref, setToggle }) {
       }
     });
   };
-
   return (
     <div ref={ineref} className={styles.contact_container}>
+      <Snackbar open={open} autoHideDuration={1100} onClose={handleClose}>
+        <MuiAlert elevation={6} variant="filled" severity={alert.type}>
+          {alert.message}
+        </MuiAlert>
+      </Snackbar>
+
       <div className={styles.topsection}>
         <h1>
           <AppsIcon
@@ -100,12 +145,12 @@ function Contact({ ineref, setToggle }) {
         <div className={styles.formulaire}>
           <h1>Get in touch</h1>
           <input
-            type="text"
+            type="email"
             placeholder="Email"
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            name="email"
+            name={email}
           />
           <input
             type="text"
@@ -113,7 +158,8 @@ function Contact({ ineref, setToggle }) {
             onChange={(e) => {
               setName(e.target.value);
             }}
-            name="name"
+            name={name}
+            required
           />
           <textarea
             style={{ width: "100px" }}
@@ -122,16 +168,16 @@ function Contact({ ineref, setToggle }) {
             onChange={(e) => {
               setBody(e.target.value);
             }}
-            name="body"
+            name={body}
+            required
           />
           <button
             className={styles.sendmebtn}
             type="submit"
             onClick={(e) => {
-              handle(e);
+              valid() && handle(e);
             }}
           >
-            {" "}
             <SendIcon className={styles.sendmeicon} /> Send
           </button>
         </div>
