@@ -62,7 +62,7 @@ function Skills({ ineref, setToggle }) {
             <span>webRTC</span>
           </div>
           <div>
-            <img src="./static/Tensorflow.png" alt="" />
+            <img src="./static/tensorflow.png" alt="" />
             <span>Tensorflow</span>
           </div>
           <div>
