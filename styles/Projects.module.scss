@@ -1,0 +1,164 @@
+@import "_colors.scss";
+@import "_mixins.scss";
+.projects_container {
+  height: 100vh;
+  scroll-snap-align: start;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+  .topsection {
+    h1 {
+      .muiToggle {
+        display: none;
+      }
+      margin: 0;
+      padding: 0 10px;
+      cursor: pointer;
+      color: white;
+      background-color: $primary-color;
+      line-height: 7vh;
+      text-align: justify;
+    }
+    .p {
+      margin: 0;
+      // margin-top: 2%;
+      margin-bottom: 1%;
+      padding: 10px 10px;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: center;
+      background-color: rgba(223, 219, 219, 0.3);
+      span {
+        font-weight: 100;
+      }
+      .hiremebtn {
+        background-color: $primary-color;
+        color: white;
+        opacity: 0.8;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 0.5vh 2vw;
+        margin-top: 5px;
+        div {
+          display: flex;
+          align-items: center;
+        }
+        .hiremeicon {
+          width: 15px;
+          margin-right: 5px;
+        }
+      }
+      .hiremebtn:hover {
+        opacity: 1;
+      }
+    }
+  }
+  .bottomsection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 70vh;
+    padding: 1px;
+  }
+  .footer {
+    border-top: rgba(128, 128, 128, 0.3) 1px solid;
+    color: rgba(0, 0, 0, 0.7);
+    height: 5vh;
+    text-align: center;
+    position: relative;
+    .footert {
+      position: absolute;
+      bottom: 5px;
+      left: 0;
+      right: 0;
+      font-weight: 500;
+      font-size: small;
+      span {
+        color: #0d52a1;
+        cursor: pointer;
+      }
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@include phone-template {
+  .projects_container {
+    .topsection {
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        .muiToggle {
+          display: inline-block;
+          margin: 2%;
+          border-radius: 10px;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .bottomsection {
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .projects_container {
+    .topsection {
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+      }
+      .p {
+        margin: 0;
+        margin-bottom: 1%;
+        padding: 5px 10px;
+        color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        font-size: smaller;
+        background-color: rgba(223, 219, 219, 0.3);
+        span {
+          font-weight: 100;
+        }
+        .hiremebtn {
+          background-color: $primary-color;
+          color: white;
+          opacity: 0.8;
+          font-weight: 500;
+          border: none;
+          cursor: pointer;
+          border-radius: 3px;
+          padding: 0.5vh 2vw;
+          margin-top: 5px;
+          div {
+            display: flex;
+            align-items: center;
+          }
+          .hiremeicon {
+            width: 15px;
+            margin-right: 5px;
+          }
+        }
+        .hiremebtn:hover {
+          opacity: 1;
+        }
+      }
+    }
+    .bottomsection {
+      height: 69vh;
+      scroll-snap-type: y mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@import "_colors.scss";
+@import "_mixins.scss";
+.skills_container {
+  height: 100vh;
+  scroll-snap-align: start;
+  .skillscontent {
+    height: 20%;
+    h1 {
+      margin: 0;
+      padding: 0 10px;
+      cursor: pointer;
+      color: white;
+      background-color: $primary-color;
+      line-height: 7vh;
+      text-align: justify;
+      .muiToggle {
+        display: none;
+      }
+    }
+
+    p {
+      background-color: rgba(223, 219, 219, 0.3);
+      border-left: 1px solid gray;
+      margin: 0;
+      padding: 2% 2%;
+      line-height: 4vh;
+      font-weight: 150;
+      color: rgba(0, 0, 0, 0.7);
+      text-align: justify;
+    }
+  }
+  .grid {
+    display: grid;
+    height: 80%;
+    place-items: center;
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      width: 70%;
+      justify-content: center;
+
+      div {
+        cursor: pointer;
+        width: 90px;
+        height: 60px;
+        border-radius: 5px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(216, 212, 212, 0.2);
+        margin: 20px;
+        opacity: 0.8;
+        border: 0.5px solid rgba(128, 128, 128, 0.267);
+        img {
+          max-height: 30px;
+        }
+      }
+      div:hover {
+        opacity: 1;
+        height: 58px;
+        border: 1px solid $primary-color;
+      }
+    }
+  }
+}
+@include phone-template {
+  .skills_container {
+    .skillscontent {
+      height: 20%;
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        .muiToggle {
+          display: inline-block;
+          margin: 2%;
+          border-radius: 10px;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+    }
+    .grid {
+      height: 70%;
+      .cards {
+        width: 100%;
+        div {
+          margin: 0.5px;
+          padding: 2px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .skills_container {
+    .skillscontent {
+      height: 20%;
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+      }
+      p {
+        text-align: justify;
+        font-size: 0.8rem;
+        line-height: 4vh;
+        font-weight: 100;
+      }
+    }
+    .grid {
+      height: 70%;
+      .cards {
+        width: 100%;
+        margin-top: 10px;
+        div {
+          margin: 0.5px;
+          padding: 1px;
+          span {
+            font-size: smaller;
+            font-weight: 200;
+          }
+        }
+      }
+    }
+  }
+}

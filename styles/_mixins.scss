@@ -1,0 +1,10 @@
+@mixin phone-template {
+  @media (max-width: 599px) {
+    @content;
+  }
+}
+@mixin phone-height {
+  @media only screen and (max-height: 300px) {
+    @content;
+  }
+}

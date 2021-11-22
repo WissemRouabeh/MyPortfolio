@@ -1,0 +1,219 @@
+@import "_colors.scss";
+@import "_mixins.scss";
+.contact_container {
+  height: 100vh;
+  scroll-snap-align: start;
+  .topsection {
+    h1 {
+      .muiToggle {
+        display: none;
+      }
+      margin: 0;
+      padding: 0 10px;
+      cursor: pointer;
+      color: white;
+      background-color: $primary-color;
+      // line-height: 4vh;
+      text-align: justify;
+    }
+    div {
+      text-align: center;
+      padding: 0.5%;
+
+      background-color: rgba(223, 219, 219, 0.3);
+      .contact_icons {
+        background-color: transparent;
+        margin: 0;
+        color: $primary-color;
+        .muiIcon {
+          margin: 2px 1vw;
+          cursor: pointer;
+          opacity: 0.9;
+        }
+        .muiIcon:hover {
+          opacity: 1;
+        }
+      }
+      p {
+        font-size: medium;
+        font-weight: 200;
+        color: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        margin: 0;
+
+        span {
+          color: $primary-color;
+          cursor: pointer;
+          font-weight: 500;
+        }
+        span:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  .midsection {
+    height: 65%;
+    .formulaire {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding: 0 10%;
+      padding-top: 1%;
+      z-index: 10;
+      h1 {
+        padding: 0;
+        margin: 0;
+        margin-bottom: 1%;
+      }
+      input,
+      button,
+      textarea {
+        padding: 0;
+        margin: 0;
+        margin: 0.7%;
+        width: 100%;
+      }
+
+      textarea {
+        resize: none;
+        resize: vertical;
+        min-width: 100%;
+        max-height: 100%;
+        height: 170px;
+      }
+      input {
+        height: 4vh;
+      }
+      button {
+        opacity: 0.8;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+        padding: 1vh 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      button:hover {
+        opacity: 1;
+      }
+      .sendmebtn {
+        background-color: $primary-color;
+        margin-right: 1vw;
+        color: white;
+        .sendmeicon {
+          width: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  .footer {
+    border-top: rgba(128, 128, 128, 0.3) 1px solid;
+    color: rgba(0, 0, 0, 0.7);
+    height: 10vh;
+    text-align: center;
+    position: relative;
+    .footert {
+      position: absolute;
+      bottom: 6vh;
+      left: 0;
+      right: 0;
+      font-weight: 500;
+      font-size: small;
+      span {
+        color: #0d52a1;
+        cursor: pointer;
+      }
+      span:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+@include phone-template {
+  .contact_container {
+    .topsection {
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+        .muiToggle {
+          display: inline-block;
+          margin: 2%;
+          border-radius: 10px;
+          color: rgba(255, 255, 255, 0.9);
+          font-size: 2rem;
+          cursor: pointer;
+        }
+      }
+      div {
+        .contact_icons {
+          .muiIcon {
+            margin: 3px 5vw;
+          }
+        }
+      }
+    }
+    .midsection {
+      .formulaire {
+        padding: 0 5%;
+        h1 {
+          font-size: medium;
+          margin: 2.5% 0;
+        }
+        textarea {
+          min-height: 38vh;
+          max-height: 30vh;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-height: 500px) {
+  .contact_container {
+    .topsection {
+      h1 {
+        line-height: 5vh;
+        font-size: medium;
+        display: flex;
+        align-items: center;
+      }
+      div {
+        p {
+          font-size: 0.72rem;
+        }
+        .contact_icons {
+          .muiIcon {
+            margin: 3px 3vw;
+          }
+        }
+      }
+    }
+    .midsection {
+      .formulaire {
+        padding: 0 5%;
+        h1 {
+          font-size: medium;
+          margin: 2.5% 0;
+        }
+        textarea {
+          min-height: 28vh;
+          max-height: 28vh;
+        }
+        button {
+          height: 7vh;
+        }
+        .sendmebtn {
+          .sendmeicon {
+            width: 15px;
+          }
+        }
+      }
+    }
+  }
+}
